@@ -174,6 +174,7 @@ teritorid tx staking create-validator \
   --gas=auto
   ```
   ## Delete node
+  ```
   sudo systemctl stop teritorid
   sudo systemctl disable teritorid
   sudo rm /etc/systemd/system/teritori* -rf
@@ -181,4 +182,4 @@ teritorid tx staking create-validator \
   sudo rm $HOME/.teritorid* -rf
   sudo rm $HOME/teritori -rf
   sed -i '/TERITORI_/d' ~/.bash_profile
-  
+  ```
