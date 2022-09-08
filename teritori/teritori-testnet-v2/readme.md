@@ -109,3 +109,76 @@ sudo systemctl restart teritorid
 ```
 source $HOME/.bash_profile
 ```
+***
+## After the node is fully synchronized, you need to create (or restore) a wallet and create a validator
+### Check synchronization status
+```
+teritorid status 2>&1 | jq .SyncInfo
+```
+### Create wallet
+```
+teritorid keys add wallet
+```
+or recover wallet
+```
+teritorid keys add wallet --recover
+```
+### Add wallet and valoper address into variables
+```
+TERITORI_WALLET_ADDRESS=$(teritorid keys show $WALLET -a)
+TERITORI_VALOPER_ADDRESS=$(teritorid keys show $WALLET --bech val -a)
+echo 'export TERITORI_WALLET_ADDRESS='${TERITORI_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export TERITORI_VALOPER_ADDRESS='${TERITORI_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+## Create validator
+*Test tokens to create a validator must be requested in discord*
+#### Check your wallet balance
+```
+teritorid query bank balances <address>
+```
+*If your wallet does not show any balance than probably your node is still syncing. Please wait until it finish to synchronize and then continue*
+### To create your validator run command below (change name)
+```
+teritorid tx staking create-validator \
+  --amount 1000000utori \
+  --from wallet \
+  --commission-max-change-rate "0.01" \
+  --commission-max-rate "0.2" \
+  --commission-rate "0.07" \
+  --min-self-delegation "1" \
+  --pubkey  $(teritorid tendermint show-validator) \
+  --moniker <name> \
+  --chain-id teritori-testnet-v2
+  ```
+  ***
+  ## Other commands
+  ### Check logs
+  ```
+  journalctl -fu teritorid -o cat
+  ```
+  ### Restart service
+  ```
+  sudo systemctl restart teritorid
+  ```
+  ### Synchronization info
+  ```
+  teritorid status 2>&1 | jq .SyncInfo
+  ```
+  ### Unjail validator
+  ```
+  teritorid tx slashing unjail \
+  --broadcast-mode=block \
+  --from wallet \
+  --chain-id=teritori-testnet-v2 \
+  --gas=auto
+  ```
+  ## Delete node
+  sudo systemctl stop teritorid
+  sudo systemctl disable teritorid
+  sudo rm /etc/systemd/system/teritori* -rf
+  sudo rm $(which teritorid) -rf
+  sudo rm $HOME/.teritorid* -rf
+  sudo rm $HOME/teritori -rf
+  sed -i '/TERITORI_/d' ~/.bash_profile
+  
