@@ -1,3 +1,4 @@
+![](https://teritori.com/logo.svg)
 # Teritori Network
 - Website: https://teritori.com/
 - Twitter: https://twitter.com/TeritoriNetwork
