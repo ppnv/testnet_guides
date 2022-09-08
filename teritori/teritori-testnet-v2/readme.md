@@ -9,8 +9,7 @@ NodesGuru - https://teritori.explorers.guru <br>
 PingPub - https://explorer.stake-take.com/teritori-testnet/staking
 ## Official documentation
 [Validator setup instructions](https://github.com/TERITORI/teritori-chain/blob/main/testnet/teritori-testnet-v2/README.md)
-## Set up your teritori fullnode
-Manual install
+## Set up your teritori fullnode (manual install)
 ### Update packages
 ```
 sudo apt update && sudo apt upgrade -y
@@ -21,10 +20,12 @@ sudo apt install curl build-essential git wget jq make gcc tmux chrony -y
 ```
 ### Install GO
 ```
-cd $HOME
-wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz
-rm go1.18.3.linux-amd64.tar.gz
+cd $HOME && \
+ver="1.18.4" && \
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
+sudo rm -rf /usr/local/go && \
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \
+rm "go$ver.linux-amd64.tar.gz" && \
 echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile && \
 source $HOME/.bash_profile && \
 go version
