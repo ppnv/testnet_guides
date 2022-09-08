@@ -42,7 +42,7 @@ teritorid config chain-id teritori-testnet-v2
 teritorid config keyring-backend test
 teritorid config node tcp://localhost:26657
 ```
-### Init app (change <nodename>)
+### Init app (change nodename)
 ```
 teritorid init <nodename> --chain-id teritori-testnet-v2
 ```
