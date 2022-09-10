@@ -5,4 +5,4 @@ You can see my portfolio on the website: 🖥 https://ppnv.space
 Contacts: <br>
 Telegram: @styd_tr <br>
 Discord: Sergio | PPNV#0083 <br>
-Twitter: @ppnv_service <br>
+Twitter: @ppnv_service
