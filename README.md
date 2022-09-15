@@ -1,6 +1,6 @@
 On this page you can find guides to most popular crypto projects ✅
 
-You can see my portfolio on the website: 🖥 https://ppnv.space
+You can see my portfolio on the my website: 🖥 https://ppnv.space
 
 Contacts: <br>
 Telegram: @styd_tr <br>
