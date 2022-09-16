@@ -126,8 +126,8 @@ teritorid keys add wallet --recover
 ```
 ### Add wallet and valoper address into variables
 ```
-TERITORI_WALLET_ADDRESS=$(teritorid keys show $WALLET -a)
-TERITORI_VALOPER_ADDRESS=$(teritorid keys show $WALLET --bech val -a)
+TERITORI_WALLET_ADDRESS=$(teritorid keys show wallet -a)
+TERITORI_VALOPER_ADDRESS=$(teritorid keys show wallet --bech val -a)
 echo 'export TERITORI_WALLET_ADDRESS='${TERITORI_WALLET_ADDRESS} >> $HOME/.bash_profile
 echo 'export TERITORI_VALOPER_ADDRESS='${TERITORI_VALOPER_ADDRESS} >> $HOME/.bash_profile
 source $HOME/.bash_profile
