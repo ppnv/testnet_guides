@@ -8,7 +8,7 @@
 NodesGuru - https://haqq.explorers.guru <br>
 ## Official documentation
 [Validator setup instructions](https://github.com/haqq-network/haqq?ysclid=l6txaje24v893082750)
-## Set up your teritori fullnode (manual install)
+## Set up your teritori fullnode ( manual install )
 ### Update packages
 ```
 sudo apt update && sudo apt upgrade -y
