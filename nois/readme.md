@@ -132,16 +132,22 @@ echo 'export NOIS_VALOPER_ADDRESS='${NOIS_VALOPER_ADDRESS} >> $HOME/.bash_profil
 source $HOME/.bash_profile
 ```
 ## Create validator
-*Test tokens to create a validator must be requested special command*
+*Test tokens to create a validator must be requested special command* (change wallet)
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"address": "<wallet>","denom": "unois"}' \
+  http://faucet.noislabs.com/credit
+```
 #### Check your wallet balance
 ```
 noisd query bank balances <address>
 ```
 *If your wallet does not show any balance than probably your node is still syncing. Please wait until it finish to synchronize and then continue*
-### To create your validator run command below (change name and amount)
+### To create your validator run command below (change name)
 ```
 noisd tx staking create-validator \
-  --amount <amount>unois \
+  --amount 100000000unois \
   --from wallet \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
