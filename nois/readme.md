@@ -75,7 +75,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.noisd/config/config.t
 ```
 ### Set minimum gas price
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unois\"/" $HOME/.noisd/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.05unois\"/" $HOME/.noisd/config/app.toml
 ```
 ### Reset chain data
 ```
@@ -147,15 +147,17 @@ noisd query bank balances <address>
 ### To create your validator run command below (change name)
 ```
 noisd tx staking create-validator \
-  --amount 100000000unois \
-  --from wallet \
-  --commission-max-change-rate "0.01" \
-  --commission-max-rate "0.2" \
-  --commission-rate "0.07" \
+  --amount=99000000unois \
+  --pubkey=$(noisd tendermint show-validator) \
+  --moniker=<name> \
+  --chain-id=nois-testnet-002 \
+  --commission-rate="0.10" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
   --min-self-delegation "1" \
-  --pubkey  $(noisd tendermint show-validator) \
-  --moniker <name> \
-  --chain-id nois-testnet-002 \
+  --from=wallet \
+  --fees=16000unois \
+  --gas=300000 \
   -y
   ```
   ***
