@@ -5,7 +5,7 @@
 - Discord: https://discord.gg/JvUrJJeGXn
 - Docs: https://docs.nois.network/
 ## Explorers
-NA
+https://explorer.nodestake.top/nois-testnet
 ## Official documentation
 [Validator setup instructions](https://docs.nois.network/use-cases/for-validators)
 ## Set up your teritori fullnode (manual install)
