@@ -1,6 +1,6 @@
 ![](https://teritori.com/logo.svg)
 # Teritori Network
-- Website: https://teritori.com/
+- Website: https://teritori.com
 - Twitter: https://twitter.com/TeritoriNetwork
 - Discord: https://discord.gg/qYg9ex5Vjk
 - Github: https://github.com/TERITORI
