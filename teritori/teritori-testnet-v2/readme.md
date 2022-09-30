@@ -5,7 +5,7 @@
 - Discord: https://discord.gg/qYg9ex5Vjk
 - Github: https://github.com/TERITORI
 ## Explorers
-NodesGuru - https://teritori.explorers.guru <br>
+NodesGuru - https://teritori.explorers.guru  <br>
 PingPub - https://explorer.stake-take.com/teritori-testnet/staking
 ## Official documentation
 [Validator setup instructions](https://github.com/TERITORI/teritori-chain/blob/main/testnet/teritori-testnet-v2/README.md)
