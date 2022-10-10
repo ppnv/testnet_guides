@@ -9,7 +9,7 @@ https://explorer.nodestake.top/nois-testnet
 ## Official documentation
 [Validator setup instructions](https://docs.nois.network/use-cases/for-validators)
 ## Set up your teritori fullnode (manual install)
-### Update packages
+###  Update packages
 ```
 sudo apt update && sudo apt upgrade -y
 ```
