@@ -18,7 +18,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 sudo apt install curl build-essential git wget jq make gcc tmux chrony -y
 ```
-### Install GO
+### Install  GO
 ```
 cd $HOME && \
 ver="1.18.4" && \
